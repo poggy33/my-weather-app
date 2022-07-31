@@ -1,11 +1,7 @@
 .footer {
-  position: absolute;
   width: 60%;
   bottom: 20px;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 20px auto;
   text-align: center;
   font-size: 0.9rem;
   font-family: var(--font-family);
@@ -13,19 +9,19 @@
 }
 
 @media screen and (max-width: 550px) {
-  .footer{
-     font-size: 0.8rem; 
-  } 
+  .footer {
+    font-size: 0.8rem;
+  }
 }
 
 @media screen and (max-width: 450px) {
-  .footer{
-     font-size: 0.7rem; 
-  } 
+  .footer {
+    font-size: 0.7rem;
+  }
 }
 
 @media screen and (max-width: 350px) {
-  .footer{
-     font-size: 0.6rem; 
-  } 
+  .footer {
+    font-size: 0.6rem;
+  }
 }

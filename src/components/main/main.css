@@ -9,7 +9,31 @@
   width: 600px;
   font-size: 1.2rem;
   border-radius: 1rem;
-  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.Mon, .Thu{
+    background: rgba(27, 238, 108, 0.3);
+}
+
+.Tue, .Fri {
+    background: rgba(245, 147, 155, 0.3);
+}
+
+.Wed, .Sut {
+    background: rgba(50, 170, 240, 0.3);
+}
+
+.Sun {
+    background: rgba(246, 243, 54, 0.3);
+}
+
+.main-data, .main-description {
+    flex: 2;
+}
+
+.main-part {
+    flex: 1;
 }
 
 p span {
@@ -39,20 +63,20 @@ p span {
 
   @media screen and (max-width: 450px) {
     .main {
-      width: 300px;
-      font-size: 0.8rem;
-    }
-    p span {
-      font-size: 0.7rem;
-    }
-  }
-
-  @media screen and (max-width: 450px) {
-    .main {
-      width: 250px;
+      width: 320px;
       font-size: 0.7rem;
     }
     p span {
       font-size: 0.6rem;
+    }
+  }
+
+  @media screen and (max-width: 350px) {
+    .main {
+      width: 250px;
+      font-size: 0.6rem;
+    }
+    p span {
+      font-size: 0.5rem;
     }
   }

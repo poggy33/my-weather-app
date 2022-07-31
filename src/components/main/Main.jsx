@@ -3,7 +3,7 @@ import "./main.css";
 
 const Main = (props) => {
   return (
-    <div className="main">
+    <div  className={props.day + " main"}>
       <div className="main-data">
         {props.dataCity ? (
           <p>{props.day}{" "}
