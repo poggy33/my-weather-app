@@ -21,7 +21,6 @@ function App() {
     });
     setLocation("");
   };
-  // console.log(data.list)
   useEffect(() => {
     const currentTime = () => {
       setTime(myDate(destOffset / 3600).cityDate.slice(11));
@@ -30,6 +29,7 @@ function App() {
     return () => clearInterval(myInterval);
   });
   let i = -3;
+  let partOfTheDay = " ";
   return (
     <div className="App">
       <div className="container">
@@ -48,12 +48,21 @@ function App() {
         {data.city !== undefined && (
           <div className="main-container">
             {data.list.map((item) => {
+              const icon = "/images/" + item.weather[0].icon + ".png";
               i += 3;
-          
+              const hour = Number(
+                myDate(destOffset / 3600 + i).cityDate.slice(12, 14)
+              );
+
+              if (hour >= 8 && hour < 23) {
+                partOfTheDay = "day";
+              } else {
+                partOfTheDay = "night";
+              }
               return (
                 <Main
-               
                   key={i}
+                  partOfTheDay={partOfTheDay}
                   dataCity={data.city}
                   day={myDate(destOffset / 3600 + i).weekDays[0]}
                   currentData={
@@ -61,16 +70,14 @@ function App() {
                   }
                   feels={item.main.feels_like.toFixed()}
                   wind={item.wind.speed.toFixed()}
-                  description={item.weather[0].description}
+                  icon={icon}
                 />
               );
             })}
           </div>
         )}
-        
       </div>
-
-      <Footer/>
+      <Footer />
     </div>
   );
 }

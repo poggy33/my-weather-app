@@ -12,33 +12,55 @@
   margin-bottom: 10px;
 }
 
-.Mon, .Thu{
-    background: rgba(27, 238, 108, 0.3);
+.Mon,
+.Thu {
+  background: rgba(27, 238, 108, 0.3);
 }
 
-.Tue, .Fri {
-    background: rgba(245, 147, 155, 0.3);
+.Tue,
+.Fri {
+  background: rgba(245, 147, 155, 0.3);
 }
 
-.Wed, .Sut {
-    background: rgba(50, 170, 240, 0.3);
+.Wed,
+.Sut {
+  background: rgba(50, 170, 240, 0.3);
 }
 
 .Sun {
-    background: rgba(246, 243, 54, 0.3);
+  background: rgba(246, 243, 54, 0.3);
 }
 
-.main-data, .main-description {
-    flex: 2;
+.main-data {
+  flex: 2;
+  height: 30px;
 }
 
-.main-part {
-    flex: 1;
+.main-part,
+.main-description {
+  flex: 1;
+}
+
+.main-description {
+  text-align: center;
+}
+
+.main-description img {
+  height: 35px;
+  margin: -3px 0 -8px 0;
 }
 
 p span {
   color: var(--color-text);
   font-size: 1rem;
+}
+
+.day {
+  color: rgb(207, 207, 78);
+}
+
+.night {
+  color: rgb(108, 228, 228);
 }
 
 @media screen and (max-width: 650px) {
@@ -49,34 +71,54 @@ p span {
   p span {
     font-size: 0.8rem;
   }
+  .main-description img {
+    height: 30px;
+    margin: -2px 0 -8px 0;
+  }
+  .main-description,
+  .main-part,
+  .main-data {
+    height: 20px;
+  }
 }
 
 @media screen and (max-width: 550px) {
-    .main {
-      width: 400px;
-      font-size: 0.9rem;
-    }
-    p span {
-      font-size: 0.7rem;
-    }
+  .main {
+    width: 400px;
+    font-size: 0.9rem;
   }
+  p span {
+    font-size: 0.7rem;
+  }
+  .main-description img {
+    height: 28px;
+  }
+}
 
-  @media screen and (max-width: 450px) {
-    .main {
-      width: 320px;
-      font-size: 0.7rem;
-    }
-    p span {
-      font-size: 0.6rem;
-    }
+@media screen and (max-width: 450px) {
+  .main {
+    width: 320px;
+    font-size: 0.7rem;
   }
+  p span {
+    font-size: 0.6rem;
+  }
+  .main-description img {
+    height: 22px;
+  }
+  .main-description,
+  .main-part,
+  .main-data {
+    height: 15px;
+  }
+}
 
-  @media screen and (max-width: 350px) {
-    .main {
-      width: 250px;
-      font-size: 0.6rem;
-    }
-    p span {
-      font-size: 0.5rem;
-    }
+@media screen and (max-width: 350px) {
+  .main {
+    width: 250px;
+    font-size: 0.6rem;
   }
+  p span {
+    font-size: 0.5rem;
+  }
+}

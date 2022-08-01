@@ -8,18 +8,18 @@ const Main = (props) => {
         {props.dataCity ? (
           <p>{props.day}{" "}
             {props.currentData.slice(0, 7)}
-            <span>{props.currentData.slice(12, 21)}</span>
+            <span className={props.partOfTheDay} >{props.currentData.slice(12, 21)}</span>
           </p>
         ) : null}
       </div>
       <div className="main-part">
-        {props.dataCity ? <p>{props.feels}°C</p> : null}
+        {props.dataCity ? <p className={props.partOfTheDay}>{props.feels}°C</p> : null}
       </div>
       <div className="main-part">
-        {props.dataCity ? <p>{props.wind} m/s</p> : null}
+        {props.dataCity ? <p className={props.partOfTheDay}>{props.wind} m/s</p> : null}
       </div>
       <div className="main-description">
-        {props.dataCity ? <p>{props.description}</p> : null}
+        {props.dataCity ? <img src={props.icon} alt="icon" /> : null}
       </div>
     </div>
   );
