@@ -72,8 +72,7 @@ p span {
     font-size: 0.8rem;
   }
   .main-description img {
-    height: 30px;
-    margin: -2px 0 -8px 0;
+    height: 28px;
   }
   .main-description,
   .main-part,
@@ -93,12 +92,15 @@ p span {
   .main-description img {
     height: 28px;
   }
+  .main-description {
+    margin-top: -1px;
+  }
 }
 
 @media screen and (max-width: 450px) {
   .main {
     width: 320px;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
   p span {
     font-size: 0.6rem;
@@ -111,14 +113,20 @@ p span {
   .main-data {
     height: 15px;
   }
+  .main-description {
+    margin-top: -3px;
+  }
 }
 
 @media screen and (max-width: 350px) {
   .main {
     width: 250px;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
   p span {
-    font-size: 0.5rem;
+    font-size: 0.6rem;
+  }
+  .main-description {
+    margin-top: -1px;
   }
 }

@@ -48,7 +48,7 @@ function App() {
         {data.city !== undefined && (
           <div className="main-container">
             {data.list.map((item) => {
-              const icon = "/images/" + item.weather[0].icon + ".png";
+              const weatherIcon = "/icons/" + item.weather[0].icon + ".png";
               i += 3;
               const hour = Number(
                 myDate(destOffset / 3600 + i).cityDate.slice(12, 14)
@@ -56,7 +56,37 @@ function App() {
 
               if (hour >= 8 && hour < 23) {
                 partOfTheDay = "day";
+                if (item.weather[0].icon === "01n") {
+                  item.weather[0].icon = "01d";
+                }
+                if (item.weather[0].icon === "02n") {
+                  item.weather[0].icon = "02d";
+                }
+                if (item.weather[0].icon === "03n") {
+                  item.weather[0].icon = "03d";
+                }
+                if (item.weather[0].icon === "04n") {
+                  item.weather[0].icon = "04d";
+                }
+                if (item.weather[0].icon === "10n") {
+                  item.weather[0].icon = "10d";
+                }
               } else {
+                if (item.weather[0].icon === "01d") {
+                  item.weather[0].icon = "01n";
+                }
+                if (item.weather[0].icon === "02d") {
+                  item.weather[0].icon = "02n";
+                }
+                if (item.weather[0].icon === "03d") {
+                  item.weather[0].icon = "03n";
+                }
+                if (item.weather[0].icon === "04d") {
+                  item.weather[0].icon = "04n";
+                }
+                if (item.weather[0].icon === "10d") {
+                  item.weather[0].icon = "10n";
+                }
                 partOfTheDay = "night";
               }
               return (
@@ -70,7 +100,7 @@ function App() {
                   }
                   feels={item.main.feels_like.toFixed()}
                   wind={item.wind.speed.toFixed()}
-                  icon={icon}
+                  icon={weatherIcon}
                 />
               );
             })}
