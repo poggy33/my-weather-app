@@ -12,7 +12,7 @@ const Header = (props) => {
         <div className="temp tracking-in-expand">
           <h1>{props.temp} °C</h1>
         </div>
-        <div className="time">
+        <div className="time tracking-in-expand">
           <h2>{props.time}</h2>
         </div>
       </div>
