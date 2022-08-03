@@ -22,6 +22,12 @@
   }
 
   .container {
-    min-height: 70vh;
+    min-height: 85vh;
+  }
+
+  @media screen and (max-width: 450px) {
+    .container {
+      min-height: 74vh;
+    }
   }
   
